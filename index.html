@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResumeX</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    id="body"
+    style="
+      min-height: 100vh;
+      background: rgb(73, 60, 29);
+      background: linear-gradient(
+        45deg,
+        rgba(73, 60, 29, 1) 0%,
+        rgba(115, 89, 51, 1) 34%,
+        rgba(158, 165, 174, 1) 100%
+      );
+    "
+  >
+    <!-- here goes html code  -->
+    <div class="colors">
+      <span
+        class="active"
+        style="--clr: rgb(73, 60, 29)"
+        onclick="changecolor('rgb(73,60,29)','linear-gradient(45deg, rgba(73,60,29,1) 0%, rgba(115,89,51,1) 34%, rgba(158,165,174,1) 100%)')"
+      ></span>
+      <span
+        style="--clr: rgb(185, 173, 80)"
+        onclick="changecolor('rgb(185,173,80)','linear-gradient(45deg, rgba(185,173,80,1) 0%, rgba(180,157,70,1) 34%, rgba(88,75,33,1) 100%)')"
+      ></span>
+      <span
+        style="--clr: rgb(197, 220, 238)"
+        onclick="changecolor('rgb(197,220,238)','linear-gradient(45deg, rgba(197,220,238,1) 0%, rgba(193,247,224,1) 34%, rgba(248,217,212,1) 100%)')"
+      ></span>
+      <span
+        style="--clr: rgb(53, 77, 28)"
+        onclick="changecolor('rgb(53,77,28)','linear-gradient(45deg, rgba(53,77,28,1) 0%, rgba(116,140,75,1) 34%, rgba(171,191,154,1) 100%)')"
+      ></span>
+      <span
+        style="--clr: rgb(136, 156, 120)"
+        onclick="changecolor('rgb(136,156,120)','linear-gradient(45deg, rgba(136,156,120,1) 0%, rgba(230,233,238,1) 34%, rgba(239,196,171,1) 100%)')"
+      ></span>
+    </div>
+    <div class="login d-flex" id="loginpage">
+      <h2 id="txt">Login</h2>
+      <div class="inputbox">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          class="px-2 py-3 w-100 border border-dark border-3"
+        />
+      </div>
+      <div class="inputbox">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="px-2 py-3 w-100 border border-dark border-3"
+        />
+      </div>
+      <div class="inputbox">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="xyz@gmail.com"
+          class="px-2 py-3 w-100 border border-dark border-3"
+        />
+      </div>
+      <div class="inputbox" onclick="logintohome()">
+        <input
+          type="submit"
+          value="Login"
+          id="btn"
+          class="px-2 py-3 w-100 border border-dark fw-semibold"
+          style="--bs-border-opacity: 0; background-color: #1dd1a1; color: #fff"
+        />
+      </div>
+      <div class="group d-flex justify-content-between">
+        <a href="#" style="color: #333; text-decoration: none"
+          >Forgot Password?</a
+        >
+        <a
+          href="#"
+          style="color: #333; font-weight: 700; text-decoration: underline"
+          >SignUp</a
+        >
+      </div>
+    </div>
+
+    <nav class="d-none navbar navbar-expand-lg bg-light py-3" id="nav">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-semibold" href="#">ResumeX</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Create My Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#saved_resumes">Saved Resumes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Github</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-none container" id="main">
+      <div class="row mt-5 d-flex justify-content-center align-items-center">
+        <div class="col d-flex flex-column justify-content-center">
+          <h2 class="fw-bold fs-1">Who cares</h2>
+          <h2 class="mb-3 fw-bold fs-1">who you are</h2>
+          <h5 class="mb-4 fw-semibold fs-4">
+            Design your resume and prove yourself
+          </h5>
+          <div class="button" style="width: 100%">
+            <button
+              class="btn btn-warning py-3 px-3 fw-bold"
+              onclick="hometoform()"
+            >
+              Build My Resume
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-psd/clean-modern-resume-cv-template_237398-297.jpg"
+            alt="resume-img"
+            class="img-thumbnail"
+            style="height: 50vh"
+          />
+        </div>
+      </div>
+      <div
+        class="row mt-5 d-flex justify-content-center align-items-center"
+        id="saved_resumes"
+      >
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-psd/clean-modern-resume-cv-template_237398-297.jpg"
+            alt="resume-img"
+            class="img-thumbnail"
+            style="height: 50vh"
+          />
+        </div>
+        <div class="col d-flex flex-column justify-content-center">
+          <h2 class="fw-bold fs-1">See your previous work</h2>
+
+          <h5 class="mb-4 fw-semibold fs-4">
+            Have a look at your previous work
+          </h5>
+          <div class="button" style="width: 70%">
+            <button class="btn btn-warning py-3 px-3 fw-bold">
+              Show My Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none container" id="cv-form">
+      <h1 class="text-center my-3 fw-bold">ResumeX</h1>
+      <h3 class="text-center fw-semibold">An analytical resume builder</h3>
+      <div class="row my-4">
+        <div class="col-md-6">
+          <!-- first col  -->
+          <h3 class="text-center">Personal Information</h3>
+          <div class="form-group">
+            <label for="namefield" class="mb-1">Your Name</label>
+            <input
+              type="text"
+              id="namefield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-3">
+            <label for="occfield">Your Occupation</label>
+            <input
+              type="text"
+              id="occfield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mt-3">
+            <label for="contactfield">Your Contact</label>
+            <input
+              type="number"
+              id="contactfield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="addressfield">Your Address</label>
+            <textarea
+              id="addressfield"
+              placeholder="Enter here"
+              class="form-control"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="">Select your photo</label>
+            <input
+              id="imgfield"
+              type="file"
+              accept="image/*"
+              class="form-control"
+              multiple
+            />
+          </div>
+
+          <p class="text-secondary mt-2 fw-semibold fs-3">Important Links</p>
+          <div class="form-group">
+            <label for="gmfield">Gmail</label>
+            <input
+              type="email"
+              id="gmfield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="linkedfield">LinkedIn</label>
+            <input
+              id="linkedfield"
+              placeholder="Enter here"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!-- second col  -->
+          <h3 class="text-center">Professional Information</h3>
+          <div class="form-group mt-3">
+            <label for="">Objective</label>
+            <textarea
+              id="objectivefield"
+              placeholder="Enter here"
+              class="form-control mt-3"
+              rows="4"
+            ></textarea>
+          </div>
+          <div class="form-group mt-2" id="we">
+            <label for="">Work Experience</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control wefield mt-3"
+              rows="3"
+            ></textarea>
+            <div class="container mt-3 text-center" id="weaddbutton">
+              <button class="btn btn-primary btn-sm" onclick="addNewWeField()">
+                Add
+              </button>
+            </div>
+          </div>
+          <div class="form-group mt-3" id="aq">
+            <label for="">Academic Qualification</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control aqfield mt-3"
+              rows="3"
+            ></textarea>
+            <div class="container mt-3 text-center" id="aqaddbutton">
+              <button class="btn btn-primary btn-sm" onclick="addNewAqField()">
+                Add
+              </button>
+            </div>
+          </div>
+          <div class="form-group mt-3" id="sk">
+            <label for="">Skills</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control skillfield mt-3"
+              rows="1"
+            ></textarea>
+            <div class="container mt-3 text-center" id="skilladdbutton">
+              <button
+                class="btn btn-primary btn-sm"
+                onclick="addNewSkillField()"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+          <div class="form-group mt-3" id="pr">
+            <label for="">Projects</label>
+            <textarea
+              placeholder="Enter here"
+              class="form-control projectfield mt-3"
+              rows="1"
+            ></textarea>
+            <div class="container mt-3 text-center" id="projectaddbutton">
+              <button
+                class="btn btn-primary btn-sm"
+                onclick="addNewProjectField()"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container my-3 text-center">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">
+          Generate CV
+        </button>
+      </div>
+    </div>
+
+    <div class="d-none container-1 d-flex" id="cv-template">
+      <div class="leftside">
+        <div class="profileText">
+          <div class="imgBx">
+            <img src="img.jpg" alt="" srcset="" id="imgT" />
+            <h2 id="nameT1">
+              Yash Sachan <br /><span id="occu">Web Developer</span>
+            </h2>
+          </div>
+
+          <div class="contactInfo">
+            <h3 class="title fs-4">Contact Info</h3>
+            <ul>
+              <li>
+                <span class="icon"
+                  ><i class="fa fa-phone" aria-hidden="true"></i>
+                </span>
+                <span class="text" id="contactT">29348573249</span>
+              </li>
+              <li>
+                <span class="icon"
+                  ><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </span>
+                <a class="text" href="#" id="mailT">Yash Sachan@gmail.com</a>
+              </li>
+              <li>
+                <span class="icon"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i>
+                </span>
+                <a href="#" class="text" id="linkedT">www.xxxporn.com</a>
+              </li>
+
+              <li>
+                <span class="icon"
+                  ><i class="fa fa-map-marker" aria-hidden="true"></i>
+                </span>
+                <span class="text fs-6" id="addressT">Address</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contactInfo education">
+            <h3 class="title fs-4">Education</h3>
+            <ul id="aqT"></ul>
+          </div>
+
+          <div class="contactInfo language">
+            <h3 class="title fs-4">Languages</h3>
+            <ul>
+              <li>
+                <span class="text">English</span>
+                <span class="percent">
+                  <div style="width: 90%"></div>
+                </span>
+              </li>
+              <li>
+                <span class="text">Hindi</span>
+                <span class="percent">
+                  <div style="width: 80%"></div>
+                </span>
+              </li>
+              <li>
+                <span class="text">Sanskrit</span>
+                <span class="percent">
+                  <div style="width: 70%"></div>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="rightside d-flex flex-column">
+        <div class="about">
+          <h2 class="title2 fw-bold fs-3">Objective</h2>
+          <p id="objectiveT">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+            alias qui aliquid, labore natus placeat rerum? Non alias velit
+            voluptatibus dolorum iure, libero, quasi debitis perspiciatis enim
+            commodi in exercitationem.
+          </p>
+        </div>
+        <div class="about">
+          <h2 class="title2 fw-bold fs-3">Experience</h2>
+          <div class="box" id="weT"></div>
+        </div>
+        <div class="about skills" id="skillT">
+          <h2 class="title2 fw-bold fs-3">Professional Skills</h2>
+        </div>
+        <div class="about interest">
+          <h2 class="title2 fw-bold fs-3">Projects</h2>
+          <ul
+            style="list-style-type: circle"
+            class="d-flex flex-column"
+            id="projectT"
+          ></ul>
+        </div>
+      </div>
+    </div>
+    <button
+      class="d-none btn btn-primary btn-lg"
+      id="printCV"
+      onclick="printCV()"
+    >
+      Print CV
+    </button>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
