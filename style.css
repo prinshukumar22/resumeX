@@ -17,7 +17,11 @@
 .myImg {
   width: 200px;
 }
-
+.imgsize{
+  width:150px;
+  height: 150px;
+  border-radius: 50%;
+}
 .colors {
   position: absolute;
   right: 0;

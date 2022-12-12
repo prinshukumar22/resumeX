@@ -92,8 +92,28 @@ function generateCV() {
 
   //code for setting image
   let file = document.getElementById("imgfield").files[0];
-  console.log(file.name);
-  document.getElementById("imgT").src = file.name;
+  var fileDisplayArea = document.getElementById("imgBx");
+
+  console.log(fileDisplayArea.innerHTML);
+  var imageType = /image.*/;
+
+  if (file.type.match(imageType)) {
+    console.log("Hi");
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      fileDisplayArea.innerHTML = "";
+      console.log("Hi2");
+      var img = new Image();
+      img.src = reader.result;
+      img.classList.add("imgsize");
+      fileDisplayArea.appendChild(img);
+    };
+    console.log("Hi3");
+    reader.readAsDataURL(file);
+  } else {
+    fileDisplayArea.innerHTML = "File not supported!";
+  }
   // let reader = new FileReader();
   // console.log(reader);
   // reader.result = file.name;
