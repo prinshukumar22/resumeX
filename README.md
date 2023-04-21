@@ -17,7 +17,7 @@
 
 ## About
 
-[Resume Builder](https://e-resume.vercel.app) is an open source application where one can effectively build a single page professional resume.
+[Resume Builder](https://resume-x-theta.vercel.app/) is an open source application where one can effectively build a single page professional resume.
 
 Here are some reasons you should utilise this resume builder:
 
@@ -44,7 +44,7 @@ If you are a developer and would like to contribute to resume builder by fixing 
 
 ## Core contributors
 
-<a href="https://github.com/sadanandpai"><img src="https://avatars.githubusercontent.com/u/12962887" alt="sadanand" height="75px" width="75px" /></a> <a href="https://github.com/gopal1996"><img src="https://avatars.githubusercontent.com/u/22369081" alt="sadanand" height="75px" width="75px" /></a> <a href="https://github.com/yakshaG"><img src="https://avatars.githubusercontent.com/u/26523871" alt="sadanand" height="75px" width="75px" /></a> <a href="https://github.com/siva-kannan3"><img src="https://avatars.githubusercontent.com/u/60533560" alt="sadanand" height="75px" width="75px" /></a>
+<a href="https://github.com/CyberlordYash"><img src="https://avatars.githubusercontent.com/u/95024305?v=4" alt="yash" height="75px" width="75px" /></a> <a href="https://github.com/iamadipurohit"><img src="https://avatars.githubusercontent.com/u/96544945?v=4" alt="aditya" height="75px" width="75px" /></a> <a href="https://github.com/prinshukumar22"><img src="https://avatars.githubusercontent.com/u/91736423?v=4" alt="prinshu" height="75px" width="75px" /></a>
 
 <br>
 
