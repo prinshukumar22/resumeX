@@ -4,23 +4,23 @@ const persons = [
   {
     name: 'Prinshu Behera',
     role: 'Frontend developer',
-    avatar: 'https://avatars.githubusercontent.com/u/12962887?v=4',
-    github: 'https://github.com/sadanandpai',
-    linkedin: 'https://www.linkedin.com/in/sadanandpai/',
+    avatar: 'https://avatars.githubusercontent.com/u/91736423?v=4',
+    github: 'https://github.com/prinshukumar22',
+    linkedin: 'https://www.linkedin.com/in/prinshubehera22',
   },
   {
     name: 'Aditya Sharma',
     role: 'Frontend developer',
-    avatar: 'https://avatars.githubusercontent.com/u/22369081?v=4',
-    github: 'https://github.com/gopal1996',
-    linkedin: 'https://www.linkedin.com/in/gopal1996',
+    avatar: 'https://avatars.githubusercontent.com/u/96544945?v=4',
+    github: 'https://github.com/iamadipurohit',
+    linkedin: 'https://www.linkedin.com/in/aditya-sharma-806731220/',
   },
   {
     name: 'Yash Sachan',
-    role: 'Product designer, half developer',
-    avatar: 'https://avatars.githubusercontent.com/u/26523871?v=4',
-    github: 'https://github.com/yakshaG',
-    linkedin: 'https://www.linkedin.com/in/vivek-g-india',
+    role: 'Frontend developer',
+    avatar: 'https://avatars.githubusercontent.com/u/95024305?v=4',
+    github: 'https://github.com/CyberlordYash',
+    linkedin: 'https://www.linkedin.com/in/yash-sachan-187405209/',
   },
 ];
 
