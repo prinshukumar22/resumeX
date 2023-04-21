@@ -7,8 +7,6 @@
 
 <a href="https://e-resume.vercel.app">Resume builder</a>
 
-[![](https://img.shields.io/github/stars/sadanandpai/single-page-resume-builder?style=for-the-badge)](#stars)
-[![](https://img.shields.io/github/forks/sadanandpai/single-page-resume-builder?style=for-the-badge)](#forks)
 
 [![NextJS](https://skillicons.dev/icons?i=nextjs)](https://nextjs.org/)
 [![Material React](https://skillicons.dev/icons?i=materialui)](https://mui.com/)
@@ -28,7 +26,7 @@ Here are some reasons you should utilise this resume builder:
 - No sign up needed — go straight to building!
 - Your data never leaves your device
 
-> Disclaimer: In order to enhance the vision and usage, we are shadowing our user's interactions. This is solely performed to serve you better
+
 
 <br>
 
