@@ -35,11 +35,7 @@ const HomeLayout = () => {
             </Link>
           </NavBarActions>
           <NavBarActions>
-            <Link href="#contribute" passHref={true}>
-              <StyledButton variant="text" className="max-md:hidden">
-                Contribute
-              </StyledButton>
-            </Link>
+            
             <Link href="#about-us" passHref={true}>
               <StyledButton variant="text">About us</StyledButton>
             </Link>
@@ -121,7 +117,7 @@ const HomeLayout = () => {
         </div>
       </motion.div>
 
-      <div className="bg-resume-50 my-32">
+<!--       <div className="bg-resume-50 my-32">
         <div
           id="contribute"
           className="mx-6 md:mx-40 xl:mx-60 py-12"
@@ -164,7 +160,7 @@ const HomeLayout = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div
         id="about-us"
