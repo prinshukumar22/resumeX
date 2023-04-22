@@ -11,11 +11,11 @@ export const GLOBAL_MUI_THEME = createTheme({
       500: '#59748F',
       600: '#4C667E',
       700: '#3C5268',
-      800: '#2E4052',
-      900: '#1C2C3A',
+      800: '#654E92',
+      900: '#654E92',
     },
     primary: {
-      main: '#2E4052',
+      main: '#654E92',
     },
   },
   components: {
@@ -23,10 +23,10 @@ export const GLOBAL_MUI_THEME = createTheme({
       styleOverrides: {
         switchBase: {
           '& > .MuiSwitch-thumb': {
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#654E92',
           },
           '&.Mui-checked > .MuiSwitch-thumb': {
-            backgroundColor: '#59748F', // resume 500 variant
+            backgroundColor: '#654E92', // resume 500 variant
           },
           '& + .MuiSwitch-track': {
             backgroundColor: '#C7D6E4', // resume 100 variant

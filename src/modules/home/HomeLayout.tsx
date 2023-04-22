@@ -35,7 +35,6 @@ const HomeLayout = () => {
             </Link>
           </NavBarActions>
           <NavBarActions>
-            
             <Link href="#about-us" passHref={true}>
               <StyledButton variant="text">About us</StyledButton>
             </Link>
@@ -51,7 +50,7 @@ const HomeLayout = () => {
       </nav>
       <div
         style={{
-          background: 'linear-gradient(180deg, #E7EEFA 50%, #FFFFFF 100%)',
+          background: 'linear-gradient(180deg, #ADA2FF 50%, #C0DEFF 100%)',
           fontFamily: "'Roboto Slab', serif",
         }}
       >
@@ -78,8 +77,13 @@ const HomeLayout = () => {
               />
             </div>
             <div className="col-span-12 sm:col-span-8">
-              <h3 className="text-xl md:text-2xl mb-2 text-resume-400">SIMPLEST WAY TO BUILD A</h3>
-              <h1 className="text-5xl mb-12 text-resume-800">Professional Resume</h1>
+              <h3 className="text-xl md:text-2xl mb-2 text-resume-400">
+                <span style={{ color: '#000000' }}>SIMPLEST WAY TO BUILD A : </span>
+                <span style={{ color: '#3A1078' }}>Professional Resume</span>
+                <br />
+                <br />
+              </h3>
+              <h1 className="text-5xl mb-12 text-resume-800"> ResumeX</h1>
 
               <div className="flex mb-10">
                 <div className="bg-resume-800 w-1 rounded-lg"></div>
@@ -87,12 +91,14 @@ const HomeLayout = () => {
                   &ldquo;The secret to getting ahead is getting started&rdquo;
                   <br />
                   —Mark Twain
+                  <br />
                 </p>
               </div>
               <Link href="/builder" passHref={true}>
                 <Button variant="contained" className="bg-resume-800 mb-2">
                   BUILD YOUR RESUME
                 </Button>
+                <br />
               </Link>
               <p
                 className="xl:invisible text-resume-800"
@@ -117,8 +123,6 @@ const HomeLayout = () => {
         </div>
       </motion.div>
 
-
-
       <div
         id="about-us"
         className="mx-6 md:mx-40 xl:mx-60 my-32"
@@ -126,13 +130,11 @@ const HomeLayout = () => {
       >
         <h2 className="text-resume-800 text-3xl mb-2 text-center lg:text-left">About us</h2>
         <p className="text-resume-400 mb-8 text-center lg:text-left">
-          A bunch of developers — who love to build open source projects and learn
-          along!
+          A bunch of developers — who love to build open source projects and learn along!
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <Person />
         </div>
-   
       </div>
     </motion.div>
   );
