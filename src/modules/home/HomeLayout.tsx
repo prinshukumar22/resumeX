@@ -117,50 +117,7 @@ const HomeLayout = () => {
         </div>
       </motion.div>
 
-<!--       <div className="bg-resume-50 my-32">
-        <div
-          id="contribute"
-          className="mx-6 md:mx-40 xl:mx-60 py-12"
-          style={{ fontFamily: "'Roboto Slab', serif" }}
-        >
-          <div className="grid grid-cols-12 items-center text-center">
-            <div className="col-span-12 lg:col-span-4 mb-4 lg:mb-0 flex flex-col items-center gap-2">
-              <Image src={'/icons/palette.svg'} alt="logo" height="48" width="48" />
-              <p className="text-resume-800 text-xl mt-2">
-                Do you want to make your own <strong>template?</strong>
-              </p>
-            </div>
-            <div className="col-span-12 lg:col-span-1 mb-4 lg:mb-0 text-resume-800 text-4xl">
-              <p>+</p>
-            </div>
-            <div className="col-span-12 lg:col-span-2 flex flex-col items-center gap-2">
-              <Image src={'/icons/terminal.svg'} alt="logo" height="48" width="48" />
-              <p className="text-resume-800 text-xl mt-2">
-                Do you write <strong>React</strong> code?
-              </p>
-            </div>
-            <div className="invisible lg:visible lg:col-span-2 text-resume-800 text-4xl mx-6">
-              <p>=</p>
-            </div>
-            <div className="col-span-12 lg:col-span-3 mx-auto flex flex-col items-center gap-2">
-              <div className="mb-6">
-                <Image src={'/icons/wave.svg'} alt="logo" height="48" width="48" />
-              </div>
-              <div>
-                <a
-                  href="https://github.com/prinshukumar22/resumeX"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button variant="contained" className="bg-resume-800 mt-2 lg:mt-5 mb-3">
-                    CONTRIBUTE
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+
 
       <div
         id="about-us"
